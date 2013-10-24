@@ -20,4 +20,10 @@ describe String do
     "ズィー".to_alphabet.should == "Z"
     "ゼット".to_alphabet.should == "Z"
   end
+
+  it "should be converted from alphabet to kana" do
+    "A".to_katakana.should == "エー"
+    "B".to_hiragana.should == "びー"
+    "c".to_katakana.should == "シー"
+  end
 end

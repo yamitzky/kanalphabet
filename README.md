@@ -25,7 +25,6 @@ Or install it yourself as:
     alphabet = kana.to_alphabet # A
     alphabet.to_hiragana # えー
     alphabet.to_katakana # エー
-    alphabet.to_hankakukana # ｴｰ
 
 ## Contributing
 
