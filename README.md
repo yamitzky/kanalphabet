@@ -26,6 +26,20 @@ Or install it yourself as:
     alphabet.to_hiragana # えー
     alphabet.to_katakana # エー
 
+## Future work
+
+**Not** implemented yet. Someday, someone will implement them.
+
+    require 'kanalphabet'
+    "エルオーブイイー".to_alphabet # LOVE
+    "SFC".to_hiragana join_by: "・" # エス・エフ・シー
+    "A".to_hankaku # ｴｰ
+
+    converter = Kanalphabet::Converter.new(A: "エイ")
+    converter.to_hiragana("ABC") # エイビーシー
+    converter = Kanalphabet::Converter.new(ignore: "エッチ")
+    converter.to_alphabet("えっち") # えっち
+
 ## Contributing
 
 1. Fork it
