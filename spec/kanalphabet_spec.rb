@@ -26,4 +26,12 @@ describe String do
     "B".to_hiragana.should == "びー"
     "c".to_katakana.should == "シー"
   end
+
+  context "not convertable text" do
+    it "should not be changed" do
+      "やみつき".to_alphabet.should == "やみつき"
+      "λ".to_hiragana.should == "λ"
+      "Λ".to_katakana.should == "Λ"
+    end
+  end
 end

@@ -3,7 +3,13 @@ module Kanalphabet
 
   def self.convert_to_alphabet(str)
     katakana = NKF::nkf("-Ww --katakana", str)
-    Kanalphabet::KANA_TO_ALPHABET[katakana]
+    alphabet = Kanalphabet::KANA_TO_ALPHABET[katakana]
+
+    if alphabet
+      alphabet
+    else
+      str
+    end
   end
 
   def self.convert_to_katakana(str)
@@ -17,6 +23,10 @@ module Kanalphabet
   private
   def self.to_kana(str, option)
     kana = Kanalphabet::ALPHABET_TO_KANA[str.upcase]
-    NKF::nkf("-Ww --#{option}", kana)
+    if kana
+      NKF::nkf("-Ww --#{option}", kana)
+    else
+      str
+    end
   end
 end
