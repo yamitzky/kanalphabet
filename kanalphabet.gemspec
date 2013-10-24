@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["negiga@gmail.com"]
   spec.description   = %q{Convert kana and alphabet with following pronunciation of alphabet, not ro-maji}
   spec.summary       = %q{Kana <-> Alphabet Converter}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/yamitzky/kanalphabet"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
